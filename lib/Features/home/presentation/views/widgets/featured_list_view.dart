@@ -9,7 +9,7 @@ import '../../../../../core/utils/app_router.dart';
 import 'custom_book_item.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
-  const FeaturedBooksListView({Key? key}) : super(key: key);
+  const FeaturedBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
