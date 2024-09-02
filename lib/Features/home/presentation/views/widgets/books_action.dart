@@ -27,7 +27,7 @@ class BooksAction extends StatelessWidget {
           Expanded(
               child: CustomButton(
             onPressed: () {
-              launchCustomUr(context, 'bookModel.volumeInfo.previewLink');
+              launchCustomUr(context, bookModel.volumeInfo.previewLink);
             },
             fontSize: 16,
             text: getText(bookModel),
