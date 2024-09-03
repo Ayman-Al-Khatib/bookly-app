@@ -1,4 +1,4 @@
-package com.example.chat_profinder
+package com.example.bookly
 
 import io.flutter.embedding.android.FlutterActivity
 

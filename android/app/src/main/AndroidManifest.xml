@@ -10,7 +10,7 @@
     </queries>
 
     <application
-        android:label="chat_profinder"
+        android:label="bookly"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:enableOnBackInvokedCallback="true"

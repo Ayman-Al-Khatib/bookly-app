@@ -23,6 +23,7 @@ class ServerFailure extends Failure {
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(
             dioError.response!.statusCode, dioError.response!.data);
+
       case DioExceptionType.cancel:
         return ServerFailure('Request to ApiServer was canceld');
 

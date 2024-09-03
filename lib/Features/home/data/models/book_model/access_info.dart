@@ -1,21 +1,19 @@
-import 'package:equatable/equatable.dart';
-
 import 'epub.dart';
 import 'pdf.dart';
 
-class AccessInfo extends Equatable {
-  final String? country;
-  final String? viewability;
-  final bool? embeddable;
-  final bool? publicDomain;
-  final String? textToSpeechPermission;
-  final Epub? epub;
-  final Pdf? pdf;
-  final String? webReaderLink;
-  final String? accessViewStatus;
-  final bool? quoteSharingAllowed;
+class AccessInfo {
+  String? country;
+  String? viewability;
+  bool? embeddable;
+  bool? publicDomain;
+  String? textToSpeechPermission;
+  Epub? epub;
+  Pdf? pdf;
+  String? webReaderLink;
+  String? accessViewStatus;
+  bool? quoteSharingAllowed;
 
-  const AccessInfo({
+  AccessInfo({
     this.country,
     this.viewability,
     this.embeddable,
@@ -57,20 +55,4 @@ class AccessInfo extends Equatable {
         'accessViewStatus': accessViewStatus,
         'quoteSharingAllowed': quoteSharingAllowed,
       };
-
-  @override
-  List<Object?> get props {
-    return [
-      country,
-      viewability,
-      embeddable,
-      publicDomain,
-      textToSpeechPermission,
-      epub,
-      pdf,
-      webReaderLink,
-      accessViewStatus,
-      quoteSharingAllowed,
-    ];
-  }
 }

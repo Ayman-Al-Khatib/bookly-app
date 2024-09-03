@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
+import 'package:bookly/Features/home/domins/entities/book_entity.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ import 'book_rating.dart';
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({super.key, required this.bookModel});
 
-  final BookModel bookModel;
+  final BookEntity bookModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -25,8 +25,7 @@ class BookListViewItem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-            CustomBookImage(
-                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
+            CustomBookImage(imageUrl: bookModel.image ?? ''),
             const SizedBox(
               width: 30,
             ),
@@ -37,7 +36,7 @@ class BookListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      bookModel.volumeInfo.title!,
+                      bookModel.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle20.copyWith(
@@ -49,7 +48,7 @@ class BookListViewItem extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.autherName ?? "Auther",
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
@@ -65,9 +64,8 @@ class BookListViewItem extends StatelessWidget {
                       ),
                       const Spacer(),
                       BookRating(
-                        rating:
-                            bookModel.volumeInfo.averageRating?.round() ?? 0,
-                        count: bookModel.volumeInfo.ratingsCount ?? 0,
+                        rating: bookModel.averageRating?.round() ?? 0,
+                        count: bookModel.ratingsCount ?? 0,
                       ),
                     ],
                   ),

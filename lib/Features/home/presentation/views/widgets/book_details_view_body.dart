@@ -1,4 +1,3 @@
-import 'package:bookly/Features/home/presentation/views/widgets/similar_books_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,7 @@ class BookDetailsViewBody extends StatelessWidget {
                     height: 50,
                   ),
                 ),
-                const SimilarBooksSection(),
+                // const SimilarBooksSection(),
                 const SizedBox(
                   height: 40,
                 ),
