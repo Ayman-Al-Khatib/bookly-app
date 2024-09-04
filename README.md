@@ -12,8 +12,9 @@ The Bookly App is a mobile application designed to search and filter free books 
 ## 📸 Screenshots
 
 <div style="display: flex; gap: 10px; justify-content: space-between;">
-  <img src="assets/screenshots/home_page.png" alt="Home Screen" style="width: 50%;">
-  <img src="assets/screenshots/details_book.png" alt="Book Details" style="width: 50%;">
+  <img src="assets/screenshots/home_page.png" alt="Home Screen" style="width: 47%;">
+  <image width=12>
+  <img src="assets/screenshots/details_book.png" alt="Book Details" style="width: 47%;">
 </div>
 
 ## 🛠️ Technologies Used
